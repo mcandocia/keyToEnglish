@@ -1,0 +1,19 @@
+Package: keyToEnglish
+Type: Package
+Title: Convert Data to Memorable Phrases
+Version: 0.1.0
+Author: Max Candocia
+Maintainer: Max Candocia <maxcandocia@gmail.com>
+Description: Convert keys and other values to memorable phrases. 
+  Includes some methods to build lists of words.
+License: MIT License
+Encoding: UTF-8
+LazyData: true
+Imports:
+    openssl,
+    stringr,
+    jsonlite,
+    usethis
+Depends:
+    R (>= 3.3.0)
+RoxygenNote: 7.1.1
