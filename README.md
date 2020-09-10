@@ -1,4 +1,4 @@
-#keyToEnglish
+# keyToEnglish
 
 The `keyToEnglish` package provides a function to create an easy-to-remember hash of a field by using a traditional hashing function, and then mapping substrings of the hash to a list of words.
 
