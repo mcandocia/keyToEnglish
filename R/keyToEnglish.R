@@ -13,7 +13,7 @@
 #'                     this will determine what a valid word
 #'                     consists of
 #' @param max_word_length Maximum length of extracted words
-#' @param min_word_count Minimum number of occurences for a
+#' @param min_word_count Minimum number of ocurrences for a
 #'                       word to be added to word list
 #' @param stopword_fn Filename containing stopwords to use or a list of
 #'                    stopwords (if length > 1)

@@ -19,7 +19,7 @@ When on CRAN, it can be installed with
 
 ## Usage
 
-The simplest way to use the package is by using the default word list, `wl_common`, and hasing fields as follows:
+The simplest way to use the package is by using the default word list, `wl_common`, and having fields as follows:
 
     keyToEnglish(1:5)
     # [1] "ProcedureCombAdmitCountryVoice"           "ParentPericarpNotionPompousTreat"        
