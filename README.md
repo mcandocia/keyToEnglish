@@ -11,6 +11,8 @@ It can be installed from GitHub via
     install.packages('devtools')
     devtools::install_github("mcandocia/keyToEnglish")
     
+*Note: this should ideally be done from a new R session.*
+    
 When on CRAN, it can be installed with
 
     install.packages('keyToEnglish')
