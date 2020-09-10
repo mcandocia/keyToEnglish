@@ -2,3 +2,10 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 cran-comments.md
+^\.\.*
+^.Rhistory
+^\.gitignore
+^\.Rproj\.user
+^\.git
+^.*tar\.gz
+^.*zip

@@ -12,7 +12,8 @@ keyToEnglish(
   word_list = wl_common,
   hash_subsection_size = 3,
   sep = "",
-  word_trans = "camel"
+  word_trans = "camel",
+  suppress_warning = FALSE
 )
 }
 \arguments{
@@ -39,6 +40,9 @@ hash output.}
 a list is used, then the index of the word of each phrase is
 mapped to the corresponding function with that index,
 recycling as necessary}
+
+\item{suppress_warning}{`logical` value indicating if warning of non-character
+input should be suppressed}
 }
 \value{
 `character` vector of hashed field resembling phrases
