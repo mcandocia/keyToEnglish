@@ -1,14 +1,6 @@
 #require(openssl)
 #require(stringr)
 
-KTI_METHOD_LIST=list(
-  md5=openssl::md5,
-  md4=openssl::md4,
-  sha256=openssl::sha256,
-  sha1=openssl::sha1,
-  sha2=openssl::sha2,
-  sha224=openssl::sha224
-)
 
 #' Corpora to Word List
 #'
@@ -132,6 +124,10 @@ corpora_to_word_list <- function(
 #'                   a list is used, then the index of the word of each phrase is
 #'                   mapped to the corresponding function with that index,
 #'                   recycling as necessary
+#'
+#' @param suppress_warning `logical` value indicating if warning of non-character
+#'                                   input should be suppressed
+#'
 #' @return `character` vector of hashed field resembling phrases
 #'
 #' @examples
@@ -148,10 +144,20 @@ keyToEnglish <- function(
   word_list=wl_common,
   hash_subsection_size=3,
   sep='',
-  word_trans='camel'
+  word_trans='camel',
+  suppress_warning=FALSE
 ){
+  KTI_METHOD_LIST=list(
+    md5=openssl::md5,
+    md4=openssl::md4,
+    sha256=openssl::sha256,
+    sha1=openssl::sha1,
+    sha2=openssl::sha2,
+    sha224=openssl::sha224
+  )
+
   if (!is.character(x)){
-    warning('Converting input to character')
+    if (!suppress_warning) warning('Converting input to character')
     x = as.character(x)
   }
 
