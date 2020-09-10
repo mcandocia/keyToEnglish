@@ -63,4 +63,6 @@ Max Candocia
 
 ## License 
 
-MIT License
+GPL (>= 2)
+
+Word lists from Michael Wehar's repository are under public domain.
