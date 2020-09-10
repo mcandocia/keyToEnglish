@@ -1,4 +1,4 @@
-f <- function(x) read.csv(x, header=FALSE, stringsAsFactors=FALSE)[,1,T]
+f <- function(x) gsub('[^a-z]','', read.csv(x, header=FALSE, stringsAsFactors=FALSE)[,1,T])
 
 # literature
 wl_literature = f('data-raw/default_word_list.csv')
@@ -14,7 +14,7 @@ usethis::use_data(wl_animal, overwrite=TRUE)
 
 # common 3000
 wl_common = f('data-raw/common_5000.txt')
-usethis::use_data(wl_common, overwrite=TRUE)
+usethis::use_data(wl_common, overwrite=TRUE, internal=FALSE)
 
 # freq 5663
 wl_freq5663 = f('data-raw/freq_5663.txt')

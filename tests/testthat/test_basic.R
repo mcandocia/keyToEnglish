@@ -9,7 +9,7 @@ test_that('hash_stability_check',{
                                         "LiabilityBiteFixedLikenessKnot", "FretStomachRoveCaptainPretty",
                                         "KernelBestYoungMeetSubordinate", "DrumServeNitrogenNeglectHind",
                                         "SpiderAstringentParticularReckonDropping", "ChildPearlProvideBehindOutline",
-                                        "ImposingPointedToolToneFresh-Water", "DisguiseParadiseYouthEntreatyRude",
+                                        "ImposingPointedToolToneFreshwater", "DisguiseParadiseYouthEntreatyRude",
                                         "AlphabetSerpentineIndefiniteSpecificArtillery", "InductionOccurSpeedVariationPermit",
                                         "MouseFermentBastardBeatPatch", "ProcureExceptionAssignAntecedentWhole",
                                         "UsageMembraneOrchestraBeginningInitiate", "FormedBendStarchSportInclose",
