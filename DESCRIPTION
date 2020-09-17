@@ -1,7 +1,7 @@
 Package: keyToEnglish
 Type: Package
 Title: Convert Data to Memorable Phrases
-Version: 0.1.0
+Version: 0.1.1
 Author: Max Candocia
 Maintainer: Max Candocia <maxcandocia@gmail.com>
 URL: https://github.com/mcandocia/keyToEnglish

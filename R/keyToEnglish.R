@@ -156,6 +156,29 @@ keyToEnglish <- function(
     sha224=openssl::sha224
   )
 
+  if (is.list(word_list)){
+    multiple_word_lists=TRUE
+    word_list_lengths = sapply(word_list, length)
+    #print(word_list_lengths)
+    if (all(word_list_lengths == word_list_lengths[1])){
+      word_list_length = word_list_lengths[1]
+    } else {
+      word_list_length = LCM(word_list_lengths)
+      if (list_length > 16^(hash_subsection_size)){
+        if (!suppress_warning) warning(
+          'LCM of provided word lists is greater than range of values.'
+          )
+        word_list_length = 16^hash_subsection_size
+      }
+    }
+
+    phrase_length = length(word_list)
+
+
+  } else {
+    multiple_word_lists=FALSE
+  }
+
   if (!is.character(x)){
     if (!suppress_warning) warning('Converting input to character')
     x = as.character(x)
@@ -176,6 +199,26 @@ keyToEnglish <- function(
         word_trans_function = get(word_trans)
     }
     trans_funcs[[i]] = word_trans_function
+  }
+
+  if (multiple_word_lists){
+    #
+    original_word_lists = word_list
+    word_list = paste0('X',seq_len(word_list_length))
+    n_trans_funcs = length(trans_funcs)
+    original_trans_funcs = trans_funcs
+    trans_funcs <- lapply(
+      seq_along(word_list_lengths),
+      function(i){
+        function(x) original_trans_funcs[[1 + i %% n_trans_funcs ]](
+          original_word_lists[[i]][
+            1 + (as.numeric(gsub('X','', x)) %% word_list_lengths[i])
+            ]
+        )
+      }
+
+    )
+
   }
 
   if (class(hash_function) != 'function')
@@ -202,15 +245,63 @@ keyToEnglish <- function(
 
     new_keys = unlist(lapply(
       split_hashes,
-      function(x) paste(word_trans_function(word_list[strtoi(paste0('0x', x[seq_idx])) %% n_words], seq_idx), collapse=sep)
+      function(x) paste(word_trans_function(word_list[
+        1 + strtoi(paste0('0x', x[seq_idx])) %% n_words
+      ], seq_idx), collapse=sep)
     ))
   } else {
 
     new_keys = unlist(lapply(
       split_hashes,
-      function(x) paste(word_trans_function(word_list[strtoi(paste0('0x', x[seq_idx])) %% n_words]), collapse=sep)
+      function(x) paste(
+        word_trans_function(
+          word_list[strtoi(paste0('0x', x[seq_idx])) %% n_words]
+          ),
+        collapse=sep
+      )
     ))
   }
+
   return(new_keys)
+}
+
+# least-common multiple for arbitrary number of arguments
+LCM <- function(...){
+  vals = unlist(list(...))
+  n_vals = length(vals)
+  if (n_vals==1){
+    return(vals)
+  }
+  return(
+    Reduce(lcm, vals[2:n_vals], vals[1])
+  )
+}
+
+# greatest-common denominator for arbitrary number of arguments
+GCD <- function(...){
+  vals = unlist(list(...))
+  n_vals = length(vals)
+  if (n_vals==1){
+    return(vals)
+  }
+  return(
+    Reduce(gcd, vals[2:n_vals], vals[1])
+  )
+}
+
+lcm <- function(x, y){
+  return(x*y/gcd(x,y))
+}
+
+gcd <- function(x, y){
+  if (x == y){
+    return(x)
+  }
+  for (i in ceiling(sqrt(max(x, y))):2){
+    if (x %% i == 0 & y %% i == 0){
+      return(i)
+    }
+  }
+  return(1)
 }
 
