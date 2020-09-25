@@ -1,0 +1,30 @@
+# need to continue splitting this up
+cursed
+hallowed
+beloved
+immaculate
+forgotten
+infernal
+blighted
+clothed
+naked
+irradiated
+jocular
+moist
+parched
+dirty
+clean
+galvanized
+motivated
+targeted
+giddy
+unmentionable
+popular
+despised
+imaginary
+ugly
+beautiful
+cute
+
+# use this for reference when replacing words
+# forgotten giant old yellow plastic bear of alacrity
