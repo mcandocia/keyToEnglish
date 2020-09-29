@@ -4,16 +4,14 @@ The `keyToEnglish` package provides a function to create an easy-to-remember has
 
 ## Installation
 
-Currently, it is available on GitHub, but it should hopefully be available on CRAN soon.
-
-It can be installed from GitHub via
+The latest version on GitHub can be installed via
 
     install.packages('devtools')
     devtools::install_github("mcandocia/keyToEnglish")
     
 *Note: this should ideally be done from a new R session.*
     
-When on CRAN, it can be installed with
+Normally, you should install it from CRAN with
 
     install.packages('keyToEnglish')
 
@@ -26,8 +24,9 @@ The simplest way to use the package is by using the default word list, `wl_commo
     # [3] "BuckSlackenReflectPublicationDeaden"      "AssociatedAldehydePastDisgraceOppressive"
     # [5] "CrimsonHeelParasiteWritBenefit"  
     
-You can also provide your own word list to the `word_list` parameter of `keyToEnglish()`.
+You can also provide your own word list to the `word_list` parameter of `keyToEnglish()`. 
 
+If you provide a list of lists, each 
 
     
 **Why would anyone need this?** The main reason I could think of is being able to remember a string or other value that has been anonymized while reducing the chance of a collision. 
@@ -53,7 +52,7 @@ By default, there are 5 phrases with 16^3 combinations, which is about `1.15 * 1
 ## Future
 
 * Improved text-cleaning capabilities
-* More word-lists
+* Even more word-lists
 * More options for creating phrase hashes from `keyToEnglish()`
 * Expose some common data-downloading functions (e.g., Project Gutenberg, Wikipedia API)
 

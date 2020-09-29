@@ -98,5 +98,153 @@
 #' keyToEnglish(1:5, word_list=wl_freq5663)
 "wl_freq5663"
 
+#' Animal Phrase Structure Word Multilist
+#'
+#' Word lists of sizes, colors, animals, and attributes to construct memorable phrases
+#'
+#' @docType data
+#'
+#' @usage data(wml_animals)
+#'
+#' @format A `list` of `character` vectors
+#'
+#' @keywords datasets
+#'
+#' @examples
+#'
+#' keyToEnglish(1:5, word_list=wml_animals)
+"wml_animals"
 
+#' Concrete Nouns Wordlist
+#'
+#' Word list of 2048 singular, concrete nouns, largely excluding materials and liquids that
+#' cannot be referred to in the singular form
+#'
+#' @docType data
+#'
+#' @usage data(wl_nouns_concrete)
+#'
+#' @format A `character` vector
+#'
+#' @keywords datasets
+"wl_nouns_concrete"
 
+#' Plural Concrete Nouns Wordlist
+#'
+#' Word list of 2048 concrete nouns in plural form, largely excluding materials and liquids that
+#' cannot be referred to in the singular form.
+#'
+#' @docType data
+#'
+#' @usage data(wl_nouns_concrete_plural)
+#'
+#' @format A `character` vector
+#'
+#' @keywords datasets
+"wl_nouns_concrete_plural"
+
+#' Visual Adjectives Wordlist
+#'
+#' Word list of 256 adjectives that visually describe an object.
+#'
+#' @docType data
+#'
+#' @usage data(wl_adjectives_visual)
+#'
+#' @format A `character` vector
+#'
+#' @keywords datasets
+"wl_adjectives_visual"
+
+#' Non-Origin Adjectives Wordlist
+#'
+#' Word list of 256 adjectives that do not describe origin, so they can
+#' usually be used prior to visual/origin adjectives without breaking
+#' any grammar rules
+#'
+#' @docType data
+#'
+#' @usage data(wl_adjectives_nonorigin)
+#'
+#' @format A `character` vector
+#'
+#' @keywords datasets
+"wl_adjectives_nonorigin"
+
+#' Transitive Verbs in Infinitive Form
+#'
+#' Word list of 256 transitive verbs in infinitive form (minus the "to")
+#'
+#' @docType data
+#'
+#' @usage data(wl_verbs_transitive_infinitive)
+#'
+#' @format A `character` vector
+#'
+#' @keywords datasets
+"wl_verbs_transitive_infinitive"
+
+#' Transitive Verbs in Present Form
+#'
+#' Word list of 256 transitive verbs in present tense
+#'
+#' @docType data
+#'
+#' @usage data(wl_verbs_transitive_present)
+#'
+#' @format A `character` vector
+#'
+#' @keywords datasets
+"wl_verbs_transitive_present"
+
+#' Transitive Verbs in Gerund Form
+#'
+#' Word list of 256 transitive verbs in gerund form (i.e., "ing" at end)
+#'
+#' @docType data
+#'
+#' @usage data(wl_verbs_transitive_gerund)
+#'
+#' @format A `character` vector
+#'
+#' @keywords datasets
+"wl_verbs_transitive_gerund"
+
+#' Long Sentence Multilist
+#'
+#' List of word lists that can be used to make a 54-byte, often humorous, sentence
+#'
+#' @docType data
+#'
+#' @usage data(wml_long_sentence)
+#'
+#' @format A `list` of `character` vectors
+#'
+#' @keywords datasets
+"wml_long_sentence"
+
+#' Cute Physics Multilist
+#'
+#' List of word lists that combine cute words with physics-related words
+#'
+#' @docType data
+#'
+#' @usage data(wml_cutephysics)
+#'
+#' @format A `list` of `character` vectors
+#'
+#' @keywords datasets
+"wml_cutephysics"
+
+#' Animals Word Multilist
+#'
+#' List of word lists that combine cute words with physics-related words
+#'
+#' @docType data
+#'
+#' @usage data(wml_animals)
+#'
+#' @format A `list` of `character` vectors
+#'
+#' @keywords datasets
+"wml_animals"

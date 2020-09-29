@@ -13,7 +13,10 @@ keyToEnglish(
   hash_subsection_size = 3,
   sep = "",
   word_trans = "camel",
-  suppress_warning = FALSE
+  suppress_warnings = FALSE,
+  hash_output_length = NA,
+  forced_limit = NA,
+  numeric_append_range = NA
 )
 }
 \arguments{
@@ -32,7 +35,7 @@ word per row}
 \item{hash_subsection_size}{`numeric` length of each subsection of hash to use for word index. 16^N
 unique words can be used for a size of N. This value times
 phrase_length must be less than or equal to the length of the
-hash output.}
+hash output. Must be less than 14.}
 
 \item{sep}{`character` separator to use between each word.}
 
@@ -41,8 +44,20 @@ a list is used, then the index of the word of each phrase is
 mapped to the corresponding function with that index,
 recycling as necessary}
 
-\item{suppress_warning}{`logical` value indicating if warning of non-character
+\item{suppress_warnings}{`logical` value indicating if warning of non-character
 input should be suppressed}
+
+\item{hash_output_length}{optional `numeric` if the provided hash function is not a `character`. This is used
+to send warnings if the hash output is too small to provide full range of all
+possible combinations of outputs.}
+
+\item{forced_limit}{for multiple word lists, this is the maximum number of values used for calculating the index
+(prior to taking the modulus) for each word in a phrase. Using this may speed up processing
+longer word lists with a large least-common-multiple among individual word list lengths. This
+will introduce a small amount of bias into the randomness. This value should be much larger than
+any individual word list whose length is not a factor of this value.}
+
+\item{numeric_append_range}{optional `numeric` value of two integers indicating range of integers to append onto data}
 }
 \value{
 `character` vector of hashed field resembling phrases
