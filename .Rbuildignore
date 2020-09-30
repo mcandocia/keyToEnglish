@@ -9,3 +9,6 @@ cran-comments.md
 ^\.git
 ^.*tar\.gz
 ^.*zip
+^CRAN-RELEASE$
+^pyutils.*
+^article.*
