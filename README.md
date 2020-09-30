@@ -26,7 +26,7 @@ The simplest way to use the package is by using the default word list, `wl_commo
     
 You can also provide your own word list to the `word_list` parameter of `keyToEnglish()`. 
 
-If you provide a list of lists, each 
+If you provide a list of lists, you can create a phrase or sentence with a specific structure. `wml_long_sentence` is provided, which can create sentences such as 
 
     
 **Why would anyone need this?** The main reason I could think of is being able to remember a string or other value that has been anonymized while reducing the chance of a collision. 
@@ -52,7 +52,7 @@ By default, there are 5 phrases with 16^3 combinations, which is about `1.15 * 1
 ## Future
 
 * Improved text-cleaning capabilities
-* Even more word-lists
+* Even more word lists
 * More options for creating phrase hashes from `keyToEnglish()`
 * Expose some common data-downloading functions (e.g., Project Gutenberg, Wikipedia API)
 
