@@ -25,3 +25,10 @@ test_that('random_sentence_structure', {
     all(grepl('^[A-Z][a-z ]+\\.$', generate_random_sentences(5)))
   )
 })
+
+test_that('random_sentence_structure_fast', {
+  expect_true(
+    all(grepl('^[A-Z][a-z ]+\\.$', generate_random_sentences(5, fast=TRUE)))
+  )
+})
+

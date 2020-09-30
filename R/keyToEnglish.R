@@ -13,7 +13,7 @@
 #'                     this will determine what a valid word
 #'                     consists of
 #' @param max_word_length Maximum length of extracted words
-#' @param min_word_count Minimum number of ocurrences for a
+#' @param min_word_count Minimum number of occurrences for a
 #'                       word to be added to word list
 #' @param stopword_fn Filename containing stopwords to use or a list of
 #'                    stopwords (if length > 1)
@@ -368,11 +368,13 @@ hash_to_sentence <- function(
 #' @export
 #' @param n `numeric` number of sentences to generate
 #' @param punctuate `logical` value of whether to add spaces, capitalize first letter, and append period
+#' @param fast `logical`
 #'
 #' @return `character` vector of randomly generated sentences
 generate_random_sentences <- function(
   n,
-  punctuate=TRUE
+  punctuate=TRUE,
+  fast=FALSE
 ){
   salt_bytes = openssl::rand_bytes(128)
   salt_bytes[salt_bytes==0] = as.raw(1)
@@ -380,28 +382,56 @@ generate_random_sentences <- function(
   x = openssl::rand_num(n)
   x = paste(x, salt)
 
-  if (!punctuate){
-    return(hash_to_sentence(x))
-  } else{
-    capitalizer=list(
-      stringr::str_to_title,
-      identity,
-      identity,
-      identity,
-      identity,
-      identity
-    )
-    return(paste0(
-      hash_to_sentence(
-        x,
-        sep=' ',
-        word_trans=capitalizer
-      ),
-      '.'
-    )
-    )
-  }
+  if (!fast){
+    if (!punctuate){
+      return(hash_to_sentence(x))
+    } else {
+      capitalizer=list(
+        stringr::str_to_title,
+        identity,
+        identity,
+        identity,
+        identity,
+        identity
+      )
+      return(paste0(
+        hash_to_sentence(
+          x,
+          sep=' ',
+          word_trans=capitalizer
+        ),
+        '.'
+      ))
+    }
+  } else {
+      word_list = keyToEnglish::wml_long_sentence
+      n_words = length(word_list)
+      word_matrix = matrix('', nrow=n, ncol=n_words)
+      for (i in 1:length(word_list)){
+        word_matrix[,i] = sample(word_list[[i]], n, replace=TRUE)
+      }
+      if (punctuate){
+        word_matrix[,1] = stringr::str_to_title(word_matrix[,1])
+        return(
+          paste0(apply(
+            word_matrix,
+            1,
+            paste,
+            collapse=' '
+          ),'.')
+        )
+      } else {
+        return(
+          apply(
+            word_matrix,
+            1,
+            function(x) paste(stringr::str_to_title(x), collapse='')
+          )
+        )
+      }
+    }
 }
+
 
 #' Least Common Multiple
 #'
@@ -423,7 +453,7 @@ LCM <- function(...){
   )
 }
 
-#' Greated Common Denominator
+#' Greater Common Denominator
 #'
 #' Calculates greatest common denominator of a list of numbers
 #'
