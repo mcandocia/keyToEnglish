@@ -4,12 +4,14 @@
 \alias{generate_random_sentences}
 \title{Generate Random Sentences}
 \usage{
-generate_random_sentences(n, punctuate = TRUE)
+generate_random_sentences(n, punctuate = TRUE, fast = FALSE)
 }
 \arguments{
 \item{n}{`numeric` number of sentences to generate}
 
 \item{punctuate}{`logical` value of whether to add spaces, capitalize first letter, and append period}
+
+\item{fast}{`logical`}
 }
 \value{
 `character` vector of randomly generated sentences

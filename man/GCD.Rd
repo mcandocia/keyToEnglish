@@ -2,7 +2,7 @@
 % Please edit documentation in R/keyToEnglish.R
 \name{GCD}
 \alias{GCD}
-\title{Greated Common Denominator}
+\title{Greater Common Denominator}
 \usage{
 GCD(...)
 }

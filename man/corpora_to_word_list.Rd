@@ -31,7 +31,7 @@ consists of}
 \item{stopword_fn}{Filename containing stopwords to use or a list of
 stopwords (if length > 1)}
 
-\item{min_word_count}{Minimum number of ocurrences for a
+\item{min_word_count}{Minimum number of occurrences for a
 word to be added to word list}
 
 \item{max_size}{Maximum size of list}
