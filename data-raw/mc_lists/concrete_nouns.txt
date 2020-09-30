@@ -1301,7 +1301,8 @@ plutocrat
 pocket
 pod
 poet
-poindexterpoison
+poindexter
+poison
 pole
 police
 policeman
@@ -1640,7 +1641,6 @@ spa
 spaceplane
 spaceship
 spade
-spam
 spark
 specialist
 speck

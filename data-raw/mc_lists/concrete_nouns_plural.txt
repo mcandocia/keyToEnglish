@@ -1301,7 +1301,8 @@ plutocrats
 pockets
 pods
 poets
-poindexterspoisons
+poindexters
+poisons
 poles
 policemen
 polices
@@ -1639,7 +1640,6 @@ sourdoughs
 spaceplanes
 spaceships
 spades
-spams
 sparks
 spas
 specialists
