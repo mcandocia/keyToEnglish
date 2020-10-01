@@ -7,16 +7,16 @@ test_that('hashed_sentence_check', {
   expect_equal(hash_to_sentence(letters), c("RosyLeatherKangarooSoftensCorkWelts", "IllicitTiledBrambleThreatensVinylKnives",
                                             "AncientExtradimensionalMacadamiaConcealsChitinBazaars", "ImplodingWhiteChumpSuesTealNeckties",
                                             "FoolishBrassHedgerowThreatensTarnishedDuelists", "FabulousBrassLiverGluesFiberglassNymphs",
-                                            "BlissfulIvoryIronsightDropsElectrumSlings", "AutomaticPurpleHamburgerVexesHarlequinHoops",
+                                            "BlissfulIvoryIronsightDropsElectrumSliders", "AutomaticPurpleHamburgerVexesHarlequinHoops",
                                             "SuburbanBambooCompensatorHarassesPeridotDetectives", "SomberLeadPencilpendantRubsAnodizedKings",
                                             "AgileRuggedKidnapperBoilsIcyBeignets", "TroublingSkeletalCodpieceYanksCeruleanWarrens",
-                                            "ZealousAqueousSireBefriendsSharpWelders", "DisinheritedDottedKitchenSwallowsTallAles",
-                                            "RichCleanJokerDefacesTransparentSarsaparilla", "ConsciousSpeckledSpellBuriesLiquidVampires",
+                                            "ZealousAqueousSingerBefriendsSharpWelders", "DisinheritedDottedKitchenSwallowsTallAles",
+                                            "RichCleanJokerDefacesTransparentSardines", "ConsciousSpeckledSpellBuriesLiquidVampires",
                                             "PrimitiveKitchArmyBaptizesMoltenGingers", "BanefulShaggyHipWhipsOchreMagnates",
-                                            "ThriftyShortVagrantVeneratesCyanSacs", "PalatableIcyLawnmowerVexesConstantanShoemakers",
-                                            "MythicalOilyBoobyWhitensBasaltSomaliers", "WarmLacySergeantBuysElectrumSandblasters",
-                                            "UnhappyHardwoodFighterDressesPyriteMasts", "ExplodingWhiteVizierExterminatesLeatherRavers",
-                                            "CapriciousEbonyRivetVandalizesTweedyMissiles", "SillyAzureBaritonePeppersSiliconPaellas"
+                                            "ThriftyShortVagrantVeneratesCyanSabres", "PalatableIcyLawnmowerVexesConstantanShoals",
+                                            "MythicalOilyBoobyWhitensBasaltSojourners", "WarmLacySeraphBuysElectrumSamurai",
+                                            "UnhappyHardwoodFighterDressesPyriteMasts", "ExplodingWhiteVizierExterminatesLeatherRavens",
+                                            "CapriciousEbonyRiggerVandalizesTweedyMissiles", "SillyAzureBaritonePeppersSiliconPaellas"
   ))
 })
 

@@ -4,11 +4,15 @@
 cran-comments.md
 ^\.\.*
 ^.Rhistory
-^\.gitignore
+^\.gitignore$
 ^\.Rproj\.user
-^\.git
+^\.git$
 ^.*tar\.gz
 ^.*zip
 ^CRAN-RELEASE$
 ^pyutils.*
 ^article.*
+^\.Rhistory
+^\.\.Rcheck
+^\.git$
+^\.Rhistory$
