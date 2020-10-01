@@ -3,16 +3,17 @@
 ## Major changes
 
 * `keyToEnglish()` argument `word_list` can now be a list of word lists, each representing a position in the phrases built. This can be used to construct grammatically-correct phrases
-* Included several curated word lists for more sensical and useful patterns.
+* Included several curated word lists for more sensical and useful patterns
 
 
 ## Minor changes
 
-* Include warnings when hash function cannot cover all combinations of input
-* Added function `hash_to_sentence` that produces (more or less) grammatically correct phrases with high entropy (54 bits)
+* Included warnings when hash function cannot cover all combinations of input
+* Added function `hash_to_sentence()` that produces (more or less) grammatically correct phrases with high entropy (54 bits)
+* Added function `generate_random_sentences()` to generate random sentences, either with `openssl`'s random number generator or R's
 * Added two functions to assist with hash collision probability calculations
-* Added a function to randomly generate sentences as keys.
-* Added least-common-multiple and greatest-common-denominator functions.
+* Added a function to randomly generate sentences as keys
+* Added least-common-multiple and greatest-common-denominator functions
 
 ## Bugfixes
 
