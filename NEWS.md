@@ -1,3 +1,10 @@
+# keyToEnglish 0.2.1
+
+# Minor Changes
+
+* Added `reconciliation.R` and related functions to convert keys/strings generated from 0.2.0 to this version (and other versions for possible future fixes)
+* Changed `leoprine` to `leporine` in word list files and data. First string was typo, second string means "of or relating to rabbits".
+
 # keyToEnglish 0.2.0
 
 ## Major changes

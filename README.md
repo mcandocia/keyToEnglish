@@ -3,17 +3,17 @@
 The `keyToEnglish` package provides a function to create an easy-to-remember hash of a field by using a traditional hashing function, and then mapping substrings of the hash to a list of words.
 
 ## Installation
-
-The latest version on GitHub can be installed via
-
-    install.packages('devtools')
-    devtools::install_github("mcandocia/keyToEnglish")
-    
-*Note: this should ideally be done from a new R session.*
     
 Normally, you should install it from CRAN with
 
     install.packages('keyToEnglish')
+    
+The latest version on GitHub can be installed via
+
+    install.packages('devtools')
+    devtools::install_github("mcandocia/keyToEnglish")
+  
+*Note: this should ideally be done from a new R session.*
 
 ## Usage
 
