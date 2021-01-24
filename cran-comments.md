@@ -10,13 +10,6 @@
 
 There were no errors or warnings.
 
-Currently the only note (for R version 4.0.2) is
-
-    N  checking for future file timestamps (380ms)
-       unable to verify current time
-       
-This is the result of http://worldclockapi.com/ being down, which is beyond my control.
-
 # Downstream Dependencies
 
 There are no downstream dependencies for this package.
